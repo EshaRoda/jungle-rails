@@ -15,7 +15,16 @@ Rails.application.routes.draw do
   namespace :admin do
     root to: 'dashboard#show'
     resources :products, except: [:edit, :update, :show]
-    resources :categories, except: [:destroy, :update, :edit, :show]
+    resources :categories, except: [:edit, :update, :show, :destroy]
+    #resources :sales, except: [:destroy, :update, :edit, :show]
+
+
+
+    # bin rails g controller admin/sales
+    # bin rails g model sale name start_date:date end_date:date percent:integer
+
+
+
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
