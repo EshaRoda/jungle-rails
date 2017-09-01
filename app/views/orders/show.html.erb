@@ -20,8 +20,8 @@
       </thead>
       <tbody>
         <% @cart_total = 0 %>
-        <% @line_items.each do |line_item| %>
-          <%= render 'order', line_item: line_item %>
+        <% @items.each do |item| %>
+          <%= render 'order', item: item %>
         <% end %>
       </tbody>
       <tfoot>
