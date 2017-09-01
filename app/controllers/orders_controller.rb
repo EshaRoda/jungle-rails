@@ -10,7 +10,6 @@ class OrdersController < ApplicationController
     order  = create_order(charge)
 
     if order.valid?
-      OrderMailer.order_email(order).deliver_now
       empty_cart!
       redirect_to order, notice: 'Your Order has been placed.'
     else
@@ -70,5 +69,4 @@ class OrdersController < ApplicationController
     end
     total
   end
-
 end
