@@ -29,8 +29,6 @@ Rails.application.routes.draw do
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
-  # post '/products/:id/reviews' => 'reviews#create'
-  # post '/products/:id/reviews/:id/destroy' => 'reviews#destroy'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
